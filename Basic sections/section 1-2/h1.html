@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS H1</title>
+        <script src="https://unpkg.com/vue"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script> -->
+        <!-- <link rel="stylesheet" href="./styles.css"> -->
+    </head>
+ 
+    
+    <body>
+        <div id='vapp'>
+            <p>Still fixing it</p>    
+
+            <h1 v-once> {{ name }} </h1>
+            <p> {{ sayHello() }} </p>
+            <p v-html> {{ finishedLink }} </p>
+
+            <button v-on:click="changeLink">Click to Change Link</button>
+            <a :href="link">Link</a>
+            
+            <!-- <div class="demo red" v-on:click="attachRed=!attachRed" v-bind:class="{red: attachRed}"></div> -->
+            <!-- <div class="demo" @click="sayHello"></div> -->
+            <!-- <div class="demo red"></div> -->
+
+        </div>
+
+        <script>
+            new Vue ({
+                el: '#vapp',
+                data: {
+                    name: 'HitmonS',
+                    link: 'http://google.com',
+                    finishedLink: '<a href="http://google.com">Google</a>',
+                    // attachRed: false,
+                    // className: red,
+                }
+                // methods: {
+                //     sayHello: function() {
+                //         this.name = 'Hello!!';
+                //         alert('Hello');
+                //         return this.name;
+                //     },
+                //     changeLink: function() {
+                //         this.link = 'http://apple.com';
+                //     }
+                // }
+            })
+        </script>    
+    </body>
+
+</html>
